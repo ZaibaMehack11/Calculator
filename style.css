@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle, #ff7e5f, #feb47b, #6dd5ed, #2193b0, #f38181, #fce38a, #ff9a9e, #ffecd2);
+    background-size: 200% 200%;
+    animation: gradientBG 10s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
+
+.calculator {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 30px;
+    background: linear-gradient(145deg, #f7f7f7, #e1e1e1);
+    box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.2), -10px -10px 40px rgba(255, 255, 255, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+    width: 350px;
+    border: none;
+    padding: 20px;
+    margin: 10px;
+    background: linear-gradient(145deg, #ffffff, #d1d1d1);
+    box-shadow: inset 8px 8px 16px rgba(0, 0, 0, 0.1), inset -8px -8px 16px rgba(255, 255, 255, 0.3);
+    font-size: 35px;
+    text-align: right;
+    color: #000000; /* Black digits for visibility */
+    border-radius: 15px;
+    outline: none;
+}
+
+input::placeholder {
+    color: rgba(0, 0, 0, 0.7); /* Darker placeholder */
+}
+
+/* Round buttons with dynamic colors */
+button {
+    border: none;
+    width: 75px;
+    height: 75px;
+    margin: 10px;
+    border-radius: 50%; /* Fully round buttons */
+    color: #000000; /* Changed text color to black for visibility */
+    font-size: 24px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.2), -10px -10px 25px rgba(255, 255, 255, 0.5);
+}
+
+/* Number buttons with dynamic gradient */
+button.number {
+    background: linear-gradient(145deg, #6dd5ed, #2193b0); /* Blue Gradient for Numbers */
+    color: #000; /* Black text for better visibility */
+}
+
+/* Operator buttons with unique dynamic color */
+button.operator {
+    background: linear-gradient(145deg, #ff9966, #ff5e62); /* Bright Orange-Red Gradient */
+    color: #fff; /* Keep white text */
+}
+
+/* Clear button with dynamic green color */
+button.clear {
+    background: linear-gradient(145deg, #56ab2f, #a8e063); /* Bright Green Gradient */
+    color: #fff; /* Keep white text */
+}
+
+/* Equal button with dynamic red-yellow gradient */
+button.equalBtn {
+    background: linear-gradient(145deg, #fc4a1a, #f7b733); /* Bright Red-Yellow Gradient */
+    color: #fff; /* Keep white text */
+}
+
+/* Special button with multi-color blend */
+button.special {
+    background: linear-gradient(145deg, #3a1c71, #d76d77, #ffaf7b); /* Bright multi-color blend */
+    color: #fff; /* Keep white text */
+}
+
+button:hover {
+    transform: translateY(-5px);
+    box-shadow: 15px 15px 35px rgba(0, 0, 0, 0.2), -15px -15px 35px rgba(255, 255, 255, 0.5);
+}
+
+button:active {
+    transform: scale(0.95);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+}
